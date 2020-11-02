@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7BEC67B-29E0-42D2-A1E7-A49A3F859426}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Курсовой</RootNamespace>
+    <AssemblyName>Курсовой</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model1.cs" />
+    <Compile Include="sysdiagrams.cs" />
+    <Compile Include="Заказ.cs" />
+    <Compile Include="Клиент.cs" />
+    <Compile Include="Поставщики.cs" />
+    <Compile Include="принятие заказа.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="принятие заказа.Designer.cs">
+      <DependentUpon>принятие заказа.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Корзина.cs" />
+    <Compile Include="Корзина.Designer.cs">
+      <DependentUpon>Корзина.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Меню.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Меню.Designer.cs">
+      <DependentUpon>Меню.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Пироги.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Пироги.Designer.cs">
+      <DependentUpon>Пироги.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Горячее блюдо.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Горячее блюдо.Designer.cs">
+      <DependentUpon>Горячее блюдо.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Десерты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Десерты.Designer.cs">
+      <DependentUpon>Десерты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Напитки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Напитки.Designer.cs">
+      <DependentUpon>Напитки.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Продукты.cs" />
+    <Compile Include="Сотрудники.cs" />
+    <Compile Include="Чуду.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Чуду.Designer.cs">
+      <DependentUpon>Чуду.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Корзина.resx">
+      <DependentUpon>Корзина.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="принятие заказа.resx">
+      <DependentUpon>принятие заказа.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Меню.resx">
+      <DependentUpon>Меню.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Горячее блюдо.resx">
+      <DependentUpon>Горячее блюдо.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Десерты.resx">
+      <DependentUpon>Десерты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Напитки.resx">
+      <DependentUpon>Напитки.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Пироги.resx">
+      <DependentUpon>Пироги.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Чуду.resx">
+      <DependentUpon>Чуду.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7070-23.09-27.09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NQ_WO1Oidvc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\221.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kurze-s-kartofelem-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kurze-s-tvorogom-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abrikosovyy-puding-s-urbechem-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chak-chak-s-medom-i-orehami-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pahlava-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirog-s-kuragoy-i-chernoslivom-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sharlotka-s-yablokom-i-koricey-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sladkiy-pirog-limonnik-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trubochka-s-greckim-orehom-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blek-chudu-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chudu-s-myasom-1.1586851011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chudu-s-syrom-1.1586852617.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chudu-s-tykvoy-1.1586852053.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chudu-s-zelenyu-1.1586852739.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103_1_11_design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\222.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\331.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\441.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kurze-s-kartofelem-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kurze-s-tvorogom-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blek-chudu-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chudu-s-myasom-1.15868510111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chudu-s-syrom-1.15868526171.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chudu-s-tykvoy-1.15868520531.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chudu-s-zelenyu-1.15868527391.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52890-kholodnyi-chai-miendi-540x480.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\177391ee6faaed35cf4e8770d8f8d801.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c8744d6bb16e0dfc2c5e900c03de58bd-500x554.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deneb-limonad--kizil--1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pers-jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rychal-su--mineralnaya--gaz-voda--1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sok-kikuni-abrikos--500ml-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voda-mever--bez-gaz--1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5664.750x0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5666.750x0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\73f62a0d9704bd4a6f0facf958643a4f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abrikosovyy-puding-s-urbechem-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chak-chak-s-medom-i-orehami-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pahlava-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirog-s-kuragoy-i-chernoslivom-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sharlotka-s-yablokom-i-koricey-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sladkiy-pirog-limonnik-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trubochka-s-greckim-orehom-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dagestanskiy-pirog-s-myasom-i-kartofelem--1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dagestanskiy-pirog-s-syrom-i-tvorogom-1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dagestanskiy-pirog-s-zelenyu-i-tvorogom-1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kachi-1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini-dagestanskiy-pirog-s-kuricey-i-gribami-1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini-dagestanskiy-pirog-smes-kavkazskih-syrov-1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini-dagestanskiy-pirog-s-myasom-i-kartofelem-1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini-dagestanskiy-pirog-s-zelenyu-i-tvorogom-1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e4ac139105509a12354699c846c3bded.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
